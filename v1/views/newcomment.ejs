@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+  <div class="container">
+<form action="/campground/<%= campground._id %>/comment" method="post">
+
+    <div class="row">
+        <h2 class="text-primary"> ADD A NEW COMMENT BELOW</h2>
+   
+
+   <input class="col-sm-8 mx-3 my-2" type="text" name="text"  placeholder="COMMENT">
+   </div>
+    <button  style="display:block; margin-left:200px; width:30%" class="btn btn-info">SUBMIT</button>
+</form>
+<a href="/campground" class="text-primary">Go back</a>
+</div>
+
+<%- include("partials/footer") %>

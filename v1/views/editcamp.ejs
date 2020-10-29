@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+   <div class="container">
+  <h2 class="text-primary"> EDIT YOUR <%= campground.name %> </h2>
+  </div>
+  <div class="container">
+<form action="/campground/<%= campground._id %>?_method=PUT" method="post">
+
+    <div class="row">
+   <input class="col-sm-8 mx-3 my-2"  type="text" name="name" placeholder="NAME" value="<%=campground.name %>">
+
+   <input class="col-sm-8 mx-3 my-2" type="text" name="image"  placeholder="IMAGE URL" value="<%=campground.image %>">
+    <textarea name="description" rows="8" class="col-sm-8 mx-3 my-2"><%=campground.description %></textarea>
+   </div>
+    <button  style="display:block; margin-left:200px; width:30%" class="btn btn-info">SUBMIT</button>
+</form>
+<a href="/campground" class="text-primary">Go back</a>
+</div>
+
+<%- include("partials/footer") %>
